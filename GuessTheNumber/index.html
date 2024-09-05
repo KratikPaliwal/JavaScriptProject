@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuessTheNumber</title>
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+        }
+        #heading{
+            font-size: 20px;
+            text-align: center;
+        }
+        #main-container{
+            border: 2px solid black;
+            height: 200px;
+            border-style: none;
+        }
+        p{
+            margin: 5px;
+        }
+
+        .main-heading{
+            font-size: 30px;
+            font-weight: 800;
+            text-align: center;
+        }
+        
+        #number{
+            height: 30px;
+        }
+        .number-input{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        #sumit-btn{
+            margin-bottom: 5px;
+            height:30px;
+
+
+        }
+        #previous-div{
+            display: flex;
+            justify-content: center;
+        }
+        #remain-guess{
+            display: flex;
+            justify-content: center;
+             align-items: center;
+        }
+        #low-high{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    </style>
+    <div id="main-container">
+        <div id="heading">Number Guessing Game</div>
+        <p class="nos">Try and guess a number between 1 to 100</p>
+        <p class="nos">You have 10 attempts to guess right number</p>
+        <div class="main-heading">Guess Number</div>
+        <div class="number-input"><input type="number" name="" id="number"><br></div>
+        <div  class="number-input"><input type="Submit" id="sumit-btn"></div>
+        <div class="result-div">
+            <div id="previous-div">
+                <p id="previous-guess-number">Previous Guesses : </p>
+            </div>
+            <div id="remain-guess">
+                <p id="remaining-count" > Remaining Guess : <span id="remaining">10</span></p>
+            </div>
+        </div>
+        <p id="low-high"></p>
+</div>
+
+    <script src="index.js"></script>
+</body>
+</html>

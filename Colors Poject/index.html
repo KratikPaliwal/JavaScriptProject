@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color</title>
+</head>
+<style>
+    .button{
+        width: 200px;
+        height: 200px;
+        background-color: black;
+        border: 2px solid black;
+    }
+
+    #heading-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #yellow{
+        background-color: yellow;
+    }
+    #orange{
+        background-color: orange;
+    }
+    #grey{
+        background-color: grey;
+    }
+    #blue{
+        background-color: blue;
+    }
+
+    #container-div{
+        display: flex;
+        justify-content: space-evenly;
+    }
+</style>
+<body>
+    <div id="heading-div">
+        <h1>Color Switcher</h1>
+    </div>
+    <div id="container-div">
+        <div class="button" id="yellow"></div>
+        <div class="button" id="orange"></div>
+        <div class="button" id="grey"></div>
+        <div class="button" id="blue"></div>
+    </div>
+<script src="index.js"></script>
+</body>
+</html>

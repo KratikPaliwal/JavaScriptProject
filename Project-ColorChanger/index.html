@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackGround Color Changer</title>
+</head>
+<style>
+    #container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        height: 80vh;
+    }
+</style>
+<body>
+    <div id="container" >
+        <button id="Start-btn" >Start</button>
+        <button id="Stop-btn">Stop</button>
+    </div>
+    <div id="insert">
+        Please Press any Key
+    </div>
+    <script>
+        let start=null;
+        document.querySelector('#Start-btn').addEventListener('click',()=>{
+            start=setInterval(()=>{
+                let randomcolor=Math.floor(Math.random()*1000000);
+                
+               document.querySelector('body').style.backgroundColor=`#${randomcolor}`;
+               console.log(Date.now());
+            },1000)
+        });
+        document.querySelector('#Stop-btn').addEventListener('click',()=>{
+            clearInterval(start);
+            start=null;
+        })
+
+        const key = document.querySelector('#insert');
+        window.addEventListener('keydown',(e)=>{
+                key.innerHTML=e.key;
+        })
+
+    </script>
+</body>
+</html>
